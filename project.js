@@ -1,3 +1,4 @@
-function foo() {
-  return null    
+function foo () {
+  return null
 }
+foo()
