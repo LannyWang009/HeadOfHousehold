@@ -1,0 +1,53 @@
+<!-- This is a task card with a "submit" button that takes three types of info:
+1) Title of the chore (name-input)
+2) Deadline of the chore (date)
+3) Assigned to whom? (choose from member in the household) -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script> -->
+</head>
+<body>
+<div style="text-align: center; border:0.05rem black dashed; width:50%; margin:30% auto">
+  <form id="taskCard">
+    <h4>Task Card</h4>
+    <p>Title: <input type="text" id="taskName"></p>
+    <p>Symbol:<select name="icon">
+                <option value="medicalBill">fontawesome</option>
+                <option value="phoneBill">fontawesome</option>
+                <option value="trash">fontawesome</option>
+                <option value="username4">fontawesome</option>
+              </select>
+    </p>
+    
+    <p>Date: <input type="date" id="datepicker"></p>
+    <span>Assigned to:
+      <select name="user">
+          <option value="username1">username1</option>
+          <option value="username2">username2</option>
+          <option value="username3">username3</option>
+          <option value="username4">username4</option>
+      </select>
+    </span>
+    <p><input type="submit" value="Submit"></p>
+  </form>
+
+
+</div> 
+
+ 
+ 
+</body>
+</html>
