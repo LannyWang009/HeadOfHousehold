@@ -1,82 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
-  <title>Head of Household</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tech Balanced Household</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css.map">
 </head>
+
 <body>
-  <div class="container">
-    <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="hoh.jpg" width="30" height="30" class="d-inline-block align-top" alt="headofhoushold-logo">
-      <i>Head of Household</i>
-    </a>
-      
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">Weekly View</a>
-        <a class="nav-link" href="#">Monthly View</a>
-  </nav>
-    <!-- add in a feature where it welcomes the user by name -->
-    <div class="row justify-content-center">
-        <h1>Welcome to Head of Household (name added here)</h1> 
+
+  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="new-home.html">
+        <img src="../img/tbh-logo-wh-hires.png">
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
-  </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <p><strong>Your one stop homelife management tool</strong></p>
-    </div>
-  </div>
-
-  <div class="container">
-    <!--place daily card view here-->
-    <div class="card-group">
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            Log Out
+          </a>
         </div>
-        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Secondary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Success card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-            <div class="card-body">
-              <h5 class="card-title">Danger card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-          
       </div>
-      <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-4">Sample Text</h1>
-            <p class="lead">We can put the task creating box here</p>
-          </div>
-        </div>
     </div>
-  
+    </div>
+  </nav>
+
+  <div class="tbh-cards">
+    
+    <div class="tbh-row">
+      <div class="tbh-card-item"><h1>Chores</h1><br>
+        <img src="../img/chores-wh.png" width="80px">
+      </div>
+      <div class="tbh-card-item"><h1>Bills</h1><br>
+        <img src="../img/bills-wh.png" width="80px">
+      </div>
+      <div class="tbh-card-item"><h1>Groceries</h1><br>
+        <img src="../img/groceries-wh.png" width="80px">
+      </div>
+    </div>
+
+    <div class="tbh-row">
+      <div class="tbh-card-item"><h1>Medical</h1><br>
+        <img src="../img/medical-wh.png" width="80px">
+
+      </div>
+      <div class="tbh-card-item"><h1>Calendar</h1><br>
+        <img src="../img/calendar-wh.png" width="80px">
+      </div>
+      <div class="tbh-card-item"><h1>Fitness</h1><br>
+        <img src="../img/fitness-wh.png" width="80px">
+      </div>
+    </div>
 
   </div>
 
 
-
+  <script type="text/javascript" src="lib/main.js"></script>
 </body>
+
 </html>
