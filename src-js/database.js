@@ -20,7 +20,6 @@ const settings = {
 firestore.settings(settings)
 
 const docRef = firestore.doc('tasks/taskType')
-
 const inputTaskField = document.getElementById('tasks')
 const saveButton = document.getElementById('saveTask')
 const outputTask = document.getElementById('taskOutput')
@@ -33,7 +32,7 @@ saveButton.addEventListener('click', function () {
   }).then(function () {
     console.log('Status saved')
   }).catch(function (error) {
-    console.log('Got an error', error)
+    console.log('Got an errogit r', error)
   })
 })
 

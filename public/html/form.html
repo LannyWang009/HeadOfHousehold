@@ -8,11 +8,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Datepicker - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <title>taskcard</title>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css">? -->
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
   <!-- <script>
   $( function() {
     $( "#datepicker" ).datepicker();
@@ -32,22 +34,36 @@
               </select>
     </p>
     
-    <p>Date: <input type="date" id="datepicker"></p>
+    <p>Deadline: <input type="date" id="deadlineDate"></p>
     <span>Assigned to:
-      <select name="user">
+      <select name="user" id="executor">
           <option value="username1">username1</option>
           <option value="username2">username2</option>
           <option value="username3">username3</option>
           <option value="username4">username4</option>
       </select>
     </span>
-    <p><input type="submit" value="Submit"></p>
+    <p><input type="submit" value="Submit" id="submitbtn"></p>
   </form>
 
 
 </div> 
 
- 
- 
+<script>
+    // const firebase = require("firebase");
+    // Required for side-effects
+    // require("firebase/firestore");
+
+    // Initialize Firebase
+    firebase.initializeApp({
+        apiKey: 'AIzaSyAfOH62OimyZABipB7qopRwtbbwuNdKGaA',
+        authDomain: 'headofhousehold-222605.firebaseapp.com',
+        databaseURL: 'https://headofhousehold-222605.firebaseio.com',
+        projectId: 'headofhousehold-222605',
+        storageBucket: 'headofhousehold-222605.appspot.com',
+        messagingSenderId: '672191560403'
+    })
+</script>
+ <script src="js/cloudfirestore-test.js"></script>
 </body>
 </html>
