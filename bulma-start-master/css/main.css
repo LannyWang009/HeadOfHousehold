@@ -5489,8 +5489,14 @@ label.panel-block {
   .tabs.is-large {
     font-size: 1.5rem; }
 
+.chores-container * {
+  border-style: solid #ffffff;
+  border-width: 20px;
+}
+
 .column {
   display: block;
+  color: #ffffff;
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
   -webkit-box-flex: 1;
