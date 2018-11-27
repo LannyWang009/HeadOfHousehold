@@ -17,6 +17,8 @@
         } else {
           document.getElementById('verify-btn').style.display = 'block'
         }
+  } else {
+    // No user is signed in
 
         document.getElementById('user_para').innerHTML = 'Welcome user : ' + email_id +
                                                              '</br>Verified : ' + email_verified
@@ -68,7 +70,6 @@
 
   function send_verification () {
     var user = firebase.auth().currentUser
-
     user.sendEmailVerification().then(function () {
     // Email sent.
 
@@ -83,3 +84,4 @@
   // Anonymous
   // onAuthStateChanged
 })()
+
