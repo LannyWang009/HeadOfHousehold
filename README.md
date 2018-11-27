@@ -3,16 +3,16 @@
 
 > This is the final project for "Phase 1" of the DigitalCrafts Flex Class. The project is to build a web application as a group with libraries and APIs. For the credit of the course, our project must be in accordance with the requirements laid out below to fulfill Texas State requirements for creidt for the course. 
 
-##Project Description
-This project features a web application that will comprehensively manage the household, including daily chores, shopping list, bills, appointments and etc. In this group project, we mainly focus on the chores page, in which the head of household can assign duties to other household members, while family members can view their coming-up chores, change the status as they finish and receive notification messages. 
+## Project Description
+This project features a web application that will comprehensively manage the household, with functions including sorting daily chores, creating shopping lists, paying bills, managing appointments and etc. In this group project, our main focus is on the chores page, on which the head of household can assign duties to other family members, while family members can view their coming-up chores, change the status as they finish and receive notification messages. 
 
-Our app's mission is to improve household efficiency and to relieve the head of household(whether the mom or dad)'s pain of choir assignment and frequent oral reminders. 
+Our app's mission is to improve household efficiency and to relieve the head of household(whether the mom or dad)'s burden through technologies. 
 
-##About Us
+## About Us
 Our team includes Audy Arandela(https://github.com/aarandela), Erica Aguirre(https://github.com/Zenerika), Robert L Arnold III(https://github.com/Lee-ArnoldIII), and Lanzhen Wang(https://github.com/LannyWang009). 
 
 
-##Tech Used
+## Tech Used
 
 This app used the following technoloies:
 - **[jQuery UI](https://jqueryui.com/)**
@@ -20,12 +20,12 @@ This app used the following technoloies:
 - **[Firebase](https://firebase.google.com/)**
 - **[Cloud Firestore](https://firebase.google.com/docs/firestore/)**
 
-Our repo is connected to [Travis CI](https://travis-ci.org/).
+Our repo is connected to [Travis CI](https://travis-ci.org/) and deployed through XXXXX.
 
 
 
 
-##Tech Requirements for course purpose
+## Tech Requirements for course purpose
 This app **must**:
 
 - Use at least one JavaScript library that is not jQuery. Examples:
