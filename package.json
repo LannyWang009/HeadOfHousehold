@@ -9,9 +9,7 @@
     "watch": "onchange --initial 'src-js/*.js' -- npm run build",
     "start": "serve public"
   },
-  "dependencies": {
-    "standard": "12.0.1"
-  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LannyWang009/HeadOfHousehold.git"
@@ -25,6 +23,7 @@
   "devDependencies": {
     "serve": "^10.1.1",
     "onchange": "5.1.0",
-    "uglify-es": "3.3.9"
+    "uglify-es": "3.3.9",
+    "standard": "12.0.1"
   }
 }
