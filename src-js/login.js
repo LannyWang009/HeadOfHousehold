@@ -6,23 +6,6 @@
       document.getElementById('user_div').style.display = 'block'
       document.getElementById('login_div').style.display = 'none'
 
-<<<<<<< HEAD
-    var user = firebase.auth().currentUser
-
-    if (user != null) {
-      var email_id = user.email
-      var email_verified = user.emailVerified
-
-      if (email_verified) {
-        document.getElementById('verify_btn').style.display = 'none'
-      } else {
-        document.getElementById('verify-btn').style.display = 'block'
-      }
-
-      document.getElementById('user_para').innerHTML = 'Welcome user : ' + email_id +
-                                                             '</br>Verified : ' + email_verified
-    }
-=======
       var user = firebase.auth().currentUser
 
       if (user != null) {
@@ -34,9 +17,8 @@
         } else {
           document.getElementById('verify-btn').style.display = 'block'
         }
->>>>>>> 492384e4aded6869610a3082f61acc1e4d791d1a
-  } else {
-    // No user is signed in
+      } else {
+        // No user is signed in
 
         document.getElementById('user_para').innerHTML = 'Welcome user : ' + email_id +
                                                              '</br>Verified : ' + email_verified
@@ -86,13 +68,9 @@
     firebase.auth().signOut()
   }
 
-<<<<<<< HEAD
-  user.sendEmailVerification().then(function () {
-=======
   function send_verification () {
     var user = firebase.auth().currentUser
     user.sendEmailVerification().then(function () {
->>>>>>> 492384e4aded6869610a3082f61acc1e4d791d1a
     // Email sent.
 
       window.alert('Verification Sent')
@@ -106,4 +84,3 @@
   // Anonymous
   // onAuthStateChanged
 })()
-
