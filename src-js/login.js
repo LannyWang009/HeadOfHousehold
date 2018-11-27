@@ -35,8 +35,8 @@ window.MYAPP = window.MYAPP || {}
         } else {
           document.getElementById('verify-btn').style.display = 'block'
         }
-  } else {
-    // No user is signed in
+      } else {
+        // No user is signed in
 
         document.getElementById('user_para').innerHTML = 'Welcome user : ' + emailId +
                                                              '</br>Verified : ' + emailVerified
@@ -105,4 +105,3 @@ window.MYAPP = window.MYAPP || {}
   window.MYAPP.logout = logout
   window.MYAPP.sendVerification = sendVerification
 })()
-
