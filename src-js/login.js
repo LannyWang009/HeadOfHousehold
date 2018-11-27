@@ -1,4 +1,22 @@
+// make sure that our global object "MYAPP" exists
+window.MYAPP = window.MYAPP || {}
+
+// annoymous function for module purpose
 ;(function () {
+  const firebase = require('firebase')
+  // Required for side-effects
+  require('firebase/firestore')
+
+  // Initialize Firebase
+  firebase.initializeApp({
+    apiKey: 'AIzaSyAfOH62OimyZABipB7qopRwtbbwuNdKGaA',
+    authDomain: 'headofhousehold-222605.firebaseapp.com',
+    databaseURL: 'https://headofhousehold-222605.firebaseio.com',
+    projectId: 'headofhousehold-222605',
+    storageBucket: 'headofhousehold-222605.appspot.com',
+    messagingSenderId: '672191560403'
+  })
+
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
     // User is signed in.
@@ -6,13 +24,13 @@
       document.getElementById('user_div').style.display = 'block'
       document.getElementById('login_div').style.display = 'none'
 
-      var user = firebase.auth().currentUser
+      user = firebase.auth().currentUser
 
       if (user != null) {
-        var email_id = user.email
-        var email_verified = user.emailVerified
+        var emailId = user.email
+        var emailVerified = user.emailVerified
 
-        if (email_verified) {
+        if (emailVerified) {
           document.getElementById('verify_btn').style.display = 'none'
         } else {
           document.getElementById('verify-btn').style.display = 'block'
@@ -20,8 +38,8 @@
   } else {
     // No user is signed in
 
-        document.getElementById('user_para').innerHTML = 'Welcome user : ' + email_id +
-                                                             '</br>Verified : ' + email_verified
+        document.getElementById('user_para').innerHTML = 'Welcome user : ' + emailId +
+                                                             '</br>Verified : ' + emailVerified
       }
     } else {
     // No user is signed in
@@ -31,7 +49,7 @@
     }
   })
 
-  // Login
+  // Login function
   function login () {
     var userEmail = document.getElementById('email_field').value
     var userPass = document.getElementById('password_field').value
@@ -47,8 +65,8 @@
     })
   }
 
-  // Sign up
-  function create_account () {
+  // Sign up function
+  function createAccount () {
     var userEmail = document.getElementById('email_field').value
     var userPass = document.getElementById('password_field').value
 
@@ -63,12 +81,12 @@
     })
   }
 
-  // Logout
+  // Logout function
   function logout () {
     firebase.auth().signOut()
   }
-
-  function send_verification () {
+  // send verification function
+  function sendVerification () {
     var user = firebase.auth().currentUser
     user.sendEmailVerification().then(function () {
     // Email sent.
@@ -81,7 +99,10 @@
     })
   }
 
-  // Anonymous
-  // onAuthStateChanged
+  // export function so it may be called outside of this module
+  window.MYAPP.login = login
+  window.MYAPP.createAccount = createAccount
+  window.MYAPP.logout = logout
+  window.MYAPP.sendVerification = sendVerification
 })()
 
