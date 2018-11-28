@@ -51,6 +51,7 @@ function renderNewCard (doc, assignedUser) {
   let div = document.createElement('div')
   let task = document.createElement('h3')
   let deadline = document.createElement('p')
+  // let fontAwesome = document.createElement('i')
   // let assignedTo = document.createElement('p')
   let doneBtn = document.createElement('button')
 
@@ -80,6 +81,7 @@ function renderNewCard (doc, assignedUser) {
 
 // show real time for Marco
 taskRef.where('assignedTo', '==', 'Marco').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
@@ -93,6 +95,7 @@ taskRef.where('assignedTo', '==', 'Marco').onSnapshot(snapshot => {
 
 // show real time for Zoe
 taskRef.where('assignedTo', '==', 'Zoe').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
@@ -106,6 +109,7 @@ taskRef.where('assignedTo', '==', 'Zoe').onSnapshot(snapshot => {
 
 // show real time for Bowie
 taskRef.where('assignedTo', '==', 'Bowie').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
@@ -119,6 +123,7 @@ taskRef.where('assignedTo', '==', 'Bowie').onSnapshot(snapshot => {
 
 // show real time for Cy
 taskRef.where('assignedTo', '==', 'Cy').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
