@@ -20,16 +20,14 @@ submitbtn.addEventListener('click', function () {
   // TODO: add creator/current user uid
   console.log('saving task data to firestore')
   // Add a new document with a generate id.
-  
+
   console.log(taskName)
 
   docRef.add({
     taskname: taskName
-    uid: 
-  }).then(function(docRef) {
+  }).then(function (docRef) {
     console.log('just saved the new document: ', docRef.id)
   }).catch(function (error) {
     console.log('Error adding new task:', error)
   })
-  
 })
