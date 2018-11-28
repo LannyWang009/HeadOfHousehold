@@ -9,7 +9,6 @@
     "watch": "onchange --initial 'src-js/*.js' -- npm run build",
     "start": "serve public"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LannyWang009/HeadOfHousehold.git"

@@ -4,16 +4,10 @@ window.MYAPP = window.MYAPP || {}
 ;(function () {
   // NOTE: referencing "$" and "MYAPP" inside this module prevents standard from
   // yelling at us about unreferenced variables
-  const $ = window.jQuery
-  const MYAPP = window.MYAPP
-
-  function globalInit () {
+  function initDisplay () {
     console.info('Intializing the application now.')
-
-    // let's initialize all of our other modules
-    MYAPP.initQuote()
   }
-
-  // run globalInit when the DOM is ready using jQuery
-  $(globalInit)
+  
 })()
+
+window.MYAPP.initDisplay = initDisplay
