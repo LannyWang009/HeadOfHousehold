@@ -48,33 +48,33 @@ const cyCard = document.getElementById('Cy')
 
 // create elements and render card
 function renderNewCard (doc, assignedUser) {
-  let p = document.createElement('p')
-  let task = document.createElement('p')
+  let div = document.createElement('div')
+  let task = document.createElement('h3')
   let deadline = document.createElement('p')
-  let assignedTo = document.createElement('p')
+  // let assignedTo = document.createElement('p')
   let doneBtn = document.createElement('button')
 
-  p.setAttribute('data-id', doc.id)
+  div.setAttribute('data-id', doc.id)
+  div.setAttribute('class', 'dutyCard')
+  task.setAttribute('class', 'taskName')
+  deadline.setAttribute('class', 'dutyDeadline')
+
   console.log('doc.id = ' + doc.id)
   task.textContent = 'To do: ' + doc.data().task
   deadline.textContent = 'Deadline: ' + doc.data().deadline
-  assignedTo.textContent = doc.data().assignedTo
+  // assignedTo.textContent = doc.data().assignedTo
   doneBtn.textContent = 'done'
 
-  p.appendChild(task)
-  p.appendChild(deadline)
-  p.appendChild(doneBtn)
-  assignedUser.appendChild(p)
+  div.appendChild(task)
+  div.appendChild(deadline)
+  div.appendChild(doneBtn)
+  assignedUser.appendChild(div)
 
   // delete the data goes here
   doneBtn.addEventListener('click', function (evt) {
     evt.stopPropagation()
-    let id = evt.getAtrribute('data-id')
-    taskRef.doc(id).delete().then(function () {
-      console.log('Document successfully deleted!')
-    }).catch(function (error) {
-      console.error('Error removing document: ', error)
-    })
+    let id = evt.target.parentElement.getAttribute('data-id')
+    taskRef.doc(id).delete()
   })
 }
 
@@ -85,8 +85,8 @@ taskRef.where('assignedTo', '==', 'Marco').onSnapshot(snapshot => {
     if (change.type === 'added') {
       renderNewCard(change.doc, marcoCard)
     } else if (change.type === 'removed') {
-      let li = marcoCard.querySelector('[data-id=', change.doc.id + ']')
-      marcoCard.removeChild(li)
+      let p = marcoCard.querySelector('[data-id=' + change.doc.id + ']')
+      marcoCard.removeChild(p)
     }
   })
 })
@@ -98,8 +98,8 @@ taskRef.where('assignedTo', '==', 'Zoe').onSnapshot(snapshot => {
     if (change.type === 'added') {
       renderNewCard(change.doc, zoeCard)
     } else if (change.type === 'removed') {
-      let li = zoeCard.querySelector('[data-id=' + change.doc.id + ']')
-      zoeCard.removeChild(li)
+      let p = zoeCard.querySelector('[data-id=' + change.doc.id + ']')
+      zoeCard.removeChild(p)
     }
   })
 })
@@ -111,8 +111,8 @@ taskRef.where('assignedTo', '==', 'Bowie').onSnapshot(snapshot => {
     if (change.type === 'added') {
       renderNewCard(change.doc, bowieCard)
     } else if (change.type === 'removed') {
-      let li = bowieCard.querySelector('[data-id=' + change.doc.id + ']')
-      bowieCard.removeChild(li)
+      let p = bowieCard.querySelector('[data-id=' + change.doc.id + ']')
+      bowieCard.removeChild(p)
     }
   })
 })
@@ -124,8 +124,8 @@ taskRef.where('assignedTo', '==', 'Cy').onSnapshot(snapshot => {
     if (change.type === 'added') {
       renderNewCard(change.doc, cyCard)
     } else if (change.type === 'removed') {
-      let li = cyCard.querySelector('[data-id=' + change.doc.id + ']')
-      cyCard.removeChild(li)
+      let p = cyCard.querySelector('[data-id=' + change.doc.id + ']')
+      cyCard.removeChild(p)
     }
   })
 })
