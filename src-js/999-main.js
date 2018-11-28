@@ -11,9 +11,7 @@ window.MYAPP = window.MYAPP || {}
     console.info('Intializing the application now.')
 
     // let's initialize all of our other modules
-    MYAPP.initHomepage()
-    MYAPP.initHeader()
-    MYAPP.initMaps()
+    MYAPP.initQuote()
   }
 
   // run globalInit when the DOM is ready using jQuery
