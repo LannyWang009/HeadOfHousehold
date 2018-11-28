@@ -20,7 +20,7 @@
   <script src="../../src-js/quote.js"></script>
   <script>
     $( function() {
-      $( ".accordion" ).accordion();
+      $( "#datepicker" ).datepicker();
     } );
     </script>
 
@@ -59,8 +59,12 @@
     <div class="tbhColumn">
       <div class="taskForm">
         <form id="taskCard">
-          <p>Chore: <input type="text" name="task" id="taskName"></p>
-          <p>Deadline: <input type="date" name="dateDeadline" id="datepicker"></p>
+          <p>Chore: 
+            <select name="task" id="taskName">
+              <option value="fas fa-utensils fa-3x">Dishes</option> <!-- just change the value to whatever class name Font Awesome requires -->
+              <option value="fab fa-amazon-pay">Bills</option>
+              </select>
+          <p>Deadline: <input name="dateDeadline" id="datepicker"></p>
           <span>Family Member:
             <select name="user" id="user">
               <option value="Zoe">Zoe</option>
@@ -88,7 +92,7 @@
       </div>
       <div class="family">
 
-        <div class="tasks" id="Zoe"><div class="taskCard"><i class="fas fa-utensils fa-3x"></i></div></div>
+        <div class="tasks" id="Zoe"></div>
         <div class="tasks" id="Marco"></div>
         <div class="tasks" id="Bowie"></div>
         <div class="tasks" id="Cy"></div>

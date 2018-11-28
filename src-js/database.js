@@ -51,7 +51,7 @@ function renderNewCard (doc, assignedUser) {
   let div = document.createElement('div')
   let task = document.createElement('h3')
   let deadline = document.createElement('p')
-  // let fontAwesome = document.createElement('i')
+  let fontAwesome = document.createElement('i')
   // let assignedTo = document.createElement('p')
   let doneBtn = document.createElement('button')
 
@@ -61,12 +61,13 @@ function renderNewCard (doc, assignedUser) {
   deadline.setAttribute('class', 'dutyDeadline')
 
   console.log('doc.id = ' + doc.id)
-  task.textContent = 'To do: ' + doc.data().task
+  fontAwesome.setAttribute('class', doc.data().task)
+  // task.textContent = 'To do: ' + doc.data().task
   deadline.textContent = 'Deadline: ' + doc.data().deadline
   // assignedTo.textContent = doc.data().assignedTo
   doneBtn.textContent = 'done'
 
-  div.appendChild(task)
+  div.appendChild(fontAwesome)
   div.appendChild(deadline)
   div.appendChild(doneBtn)
   assignedUser.appendChild(div)
