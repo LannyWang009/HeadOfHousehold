@@ -59,7 +59,15 @@
     <div class="tbhColumn">
       <div class="taskForm">
         <form id="taskCard">
-          <p>Chore: <input type="text" name="task" id="taskName"></p>
+          <!-- <p>Chore: <input type="text" name="task" id="taskName"></p> -->
+          <span>Chores:
+            <select name="choresIcon" id="choresIcon">
+              <option value="Zoe">Zoe</option>
+              <option value="Marco">Marco</option>
+              <option value="Bowie">Bowie</option>
+              <option value="Cy">Cy</option>
+            </select>
+          </span>
           <p>Deadline: <input type="date" name="dateDeadline" id="datepicker"></p>
           <span>Family Member:
             <select name="user" id="user">
@@ -97,7 +105,7 @@
     </div>
   </div>
   <script src="../../src-js/database.js"></script>
-  <script src="../js/app.js"></script>
+  <!-- <script src="../js/app.js"></script> -->
 </body>
 
 </html>
