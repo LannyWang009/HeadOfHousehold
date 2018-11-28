@@ -48,22 +48,34 @@ const cyCard = document.getElementById('Cy')
 
 // create elements and render card
 function renderNewCard (doc, assignedUser) {
-  let li = document.createElement('li')
+  let p = document.createElement('p')
   let task = document.createElement('p')
   let deadline = document.createElement('p')
   let assignedTo = document.createElement('p')
+  let doneBtn = document.createElement('button')
 
-  li.setAttribute('data-id', doc.id)
+  p.setAttribute('data-id', doc.id)
   console.log('doc.id = ' + doc.id)
   task.textContent = 'To do: ' + doc.data().task
   deadline.textContent = 'Deadline: ' + doc.data().deadline
   assignedTo.textContent = doc.data().assignedTo
+  doneBtn.textContent = 'done'
 
-  li.appendChild(task)
-  li.appendChild(deadline)
-  assignedUser.appendChild(li)
+  p.appendChild(task)
+  p.appendChild(deadline)
+  p.appendChild(doneBtn)
+  assignedUser.appendChild(p)
 
   // delete the data goes here
+  doneBtn.addEventListener('click', function (evt) {
+    evt.stopPropagation()
+    let id = evt.getAtrribute('data-id')
+    taskRef.doc(id).delete().then(function () {
+      console.log('Document successfully deleted!')
+    }).catch(function (error) {
+      console.error('Error removing document: ', error)
+    })
+  })
 }
 
 // show real time for Marco
@@ -73,7 +85,7 @@ taskRef.where('assignedTo', '==', 'Marco').onSnapshot(snapshot => {
     if (change.type === 'added') {
       renderNewCard(change.doc, marcoCard)
     } else if (change.type === 'removed') {
-      let li = marcoCard.querySelector('[data-id=' + change.doc.id + ']')
+      let li = marcoCard.querySelector('[data-id=', change.doc.id + ']')
       marcoCard.removeChild(li)
     }
   })
