@@ -44,11 +44,22 @@ $primary-invert: $pink-invert;
               text-align: center;
             }
              .taskForm {
-              background-color: rgb(245, 240, 240, 0.2);
+              /* background-color: rgb(245, 240, 240, 0.2); */
               width: 20vw;
-              height: 90vh;
-              margin: 2px 15px 3px 3px;
+              height: 15vh;
+              margin: 50px 15px 3px 3px;
             }
+
+            .familyNames {
+              color: white;
+              display: flex;
+              flex-direction: row;
+            }
+
+            .familyNames * {
+              padding: 10px 7.7em;
+            }
+
              .family {
               display: flex;
               flex-direction: row;
@@ -56,9 +67,20 @@ $primary-invert: $pink-invert;
              .tasks {
               background-color: rgb(245, 240, 240, 0.2);
               width: 17vw;
-              height: 90vh;
+              height: 70vh;
               margin: 2px 4px;
             }
+
+            .taskCard {
+              width: 10vw;
+              height: 15vh;
+              margin: 0 auto;
+            }
+
+            .taskCard * {
+              margin: 15px auto;
+            }
+
              .quote {
               color: #ffffff;
               font-size: 14pt;
@@ -149,23 +171,9 @@ table {
   text-align: center;
 }
 
-.taskForm {
-  background-color: rgb(245, 240, 240, 0.2);
-  width: 20vw;
-  height: 90vh;
-  margin: 2px 15px 3px 3px;
-}
-
 .family {
   display: flex;
   flex-direction: row;
-}
-
-.tasks {
-  background-color: rgb(245, 240, 240, 0.2);
-  width: 17vw;
-  height: 90vh;
-  margin: 2px 4px;
 }
 
 .quote {

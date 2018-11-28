@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
   <script src="../../src-js/quote.js"></script>
   <script>
@@ -56,11 +57,11 @@
 
   <div class="chores">
     <div class="tbhColumn">
-      <div class="taskForm">Task Form
+      <div class="taskForm">
         <form id="taskCard">
-          <p>Title: <input type="text" name="task" id="taskName"></p>
-          <p>Date: <input type="date" name="dateDeadline" id="datepicker"></p>
-          <span>Assigned to:
+          <p>Chore: <input type="text" name="task" id="taskName"></p>
+          <p>Deadline: <input type="date" name="dateDeadline" id="datepicker"></p>
+          <span>Family Member:
             <select name="user" id="user">
               <option value="Zoe">Zoe</option>
               <option value="Marco">Marco</option>
@@ -74,12 +75,24 @@
 
 
     </div>
+
+ 
+
+
     <div class="tbhColumn">
+      <div class="familyNames">
+        <div>Zoe</div>
+        <div>Marco</div>
+        <div>Bowie</div>
+        <div>Cy</div>
+      </div>
       <div class="family">
-        <div class="tasks" id="Zoe">Zoe</div>
-        <div class="tasks" id="Marco">Marco</div>
-        <div class="tasks" id="Bowie">Bowie</div>
-        <div class="tasks" id="Cy">Cy</div>
+
+        <div class="tasks" id="Zoe"><div class="taskCard"><i class="fas fa-utensils fa-3x"></i></div></div>
+        <div class="tasks" id="Marco"></div>
+        <div class="tasks" id="Bowie"></div>
+        <div class="tasks" id="Cy"></div>
+
       </div>
     </div>
   </div>
