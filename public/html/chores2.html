@@ -54,55 +54,76 @@
     </div>
   </nav>
 
+  
+<!-- quote api 1 -->
+<div class="quote">"To Thy Own Self Be True"</div>
 
-
-  <div class="quote">"To Thy Own Self Be True"</div>
-
-  <div class="chores columns is-mobile">
-    <div class="column is-half-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+<div class="columns is-desktop">
+  <!-- task form -->
+<div class="column column1">
       <div class="taskForm">
         <form id="taskCard">
+          <p style="background-color:hsl(171, 100%, 41%); text-align: center; padding:0.05%">Add a new chore</p>
           <p>Chore: 
-            <select name="task" id="taskName">
-              <option value="fas fa-utensils fa-3x">Dishes</option> <!-- just change the value to whatever class name Font Awesome requires -->
-              <option value="fab fa-amazon-pay">Bills</option>
-              </select>
-          <p>Deadline: <input name="dateDeadline" id="datepicker"></p>
-          <span>Family Member:
-            <select name="user" id="user">
-              <option value="Zoe">Zoe</option>
-              <option value="Marco">Marco</option>
-              <option value="Bowie">Bowie</option>
-              <option value="Cy">Cy</option>
-            </select>
-          </span>
+            <div class="select is-primary">
+                <select name="task" id="taskName">
+                <option value="fas fa-utensils fa-3x">Dishes</option> <!-- just change the value to whatever class name Font Awesome requires -->
+                <option value="fab fa-amazon-pay">Bills</option>
+                </select>
+            </div>
+          <p>Deadline:<input name="dateDeadline" class="input is-primary" id="datepicker"></p>
+          <p>Family Member:
+              <div class="select is-primary">
+                <select name="user" id="user">
+                <option value="Zoe">Zoe</option>
+                <option value="Marco">Marco</option>
+                <option value="Bowie">Bowie</option>
+                <option value="Cy">Cy</option>
+                </select>
+               </div>
+            </p>
+            <br/>
           <button>Submit</button>
         </form>
+    </div>
+    </div>
+
+<!-- column 3 -->
+    <div class="column">
+        <div class="columns is-mobile dutyColumns">
+
+            <div class="personalbar column">
+                <div class="name">
+                    <p>Zoe</p>
+                </div>
+                <div class="tasks" id="Zoe"></div>
+            </div>
+
+            <div class="personalbar column">
+                <div class="name"><p>Marco</p></div>
+                <div class="tasks" id="Marco"></div>
+            </div>
+
+            <div class="personalbar column">
+                <div class="name"><p>Bowie</p></div>
+                <div class="tasks" id="Bowie"></div>
+            </div>
+
+            <div class="personalbar column">
+                <div class="name"><p>Cy</p></div>
+                <div class="tasks" id="Cy"></div>
+            </div>
+
+        </div>
+
+
       </div>
-
-
     </div>
 
  
 
 
-    <div class="tbhColumn column">
-      <div class="familyNames ">
-        <div>Zoe</div>
-        <div>Marco</div>
-        <div>Bowie</div>
-        <div>Cy</div>
-      </div>
-      <div class="family ">
 
-        <div class="tasks" id="Zoe"></div>
-        <div class="tasks" id="Marco"></div>
-        <div class="tasks" id="Bowie"></div>
-        <div class="tasks" id="Cy"></div>
-
-      </div>
-    </div>
-  </div>
   <script src="../../src-js/database.js"></script>
   <!-- <script src="../js/app.js"></script> -->
 </body>
