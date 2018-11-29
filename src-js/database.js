@@ -48,72 +48,90 @@ const cyCard = document.getElementById('Cy')
 
 // create elements and render card
 function renderNewCard (doc, assignedUser) {
-  let li = document.createElement('li')
-  let task = document.createElement('p')
+  let div = document.createElement('div')
+  let task = document.createElement('h3')
   let deadline = document.createElement('p')
-  let assignedTo = document.createElement('p')
+  let fontAwesome = document.createElement('i')
+  // let assignedTo = document.createElement('p')
+  let doneBtn = document.createElement('button')
 
-  li.setAttribute('data-id', doc.id)
+  div.setAttribute('data-id', doc.id)
+  div.setAttribute('class', 'dutyCard')
+  task.setAttribute('class', 'taskName')
+  deadline.setAttribute('class', 'dutyDeadline')
+
   console.log('doc.id = ' + doc.id)
-  task.textContent = 'To do: ' + doc.data().task
+  fontAwesome.setAttribute('class', doc.data().task)
+  // task.textContent = 'To do: ' + doc.data().task
   deadline.textContent = 'Deadline: ' + doc.data().deadline
-  assignedTo.textContent = doc.data().assignedTo
+  // assignedTo.textContent = doc.data().assignedTo
+  doneBtn.textContent = 'done'
 
-  li.appendChild(task)
-  li.appendChild(deadline)
-  assignedUser.appendChild(li)
+  div.appendChild(fontAwesome)
+  div.appendChild(deadline)
+  div.appendChild(doneBtn)
+  assignedUser.appendChild(div)
 
   // delete the data goes here
+  doneBtn.addEventListener('click', function (evt) {
+    evt.stopPropagation()
+    let id = evt.target.parentElement.getAttribute('data-id')
+    taskRef.doc(id).delete()
+  })
 }
 
 // show real time for Marco
 taskRef.where('assignedTo', '==', 'Marco').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
       renderNewCard(change.doc, marcoCard)
     } else if (change.type === 'removed') {
-      let li = marcoCard.querySelector('[data-id=' + change.doc.id + ']')
-      marcoCard.removeChild(li)
+      let p = marcoCard.querySelector('[data-id=' + change.doc.id + ']')
+      marcoCard.removeChild(p)
     }
   })
 })
 
 // show real time for Zoe
 taskRef.where('assignedTo', '==', 'Zoe').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
       renderNewCard(change.doc, zoeCard)
     } else if (change.type === 'removed') {
-      let li = zoeCard.querySelector('[data-id=' + change.doc.id + ']')
-      zoeCard.removeChild(li)
+      let p = zoeCard.querySelector('[data-id=' + change.doc.id + ']')
+      zoeCard.removeChild(p)
     }
   })
 })
 
 // show real time for Bowie
 taskRef.where('assignedTo', '==', 'Bowie').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
       renderNewCard(change.doc, bowieCard)
     } else if (change.type === 'removed') {
-      let li = bowieCard.querySelector('[data-id=' + change.doc.id + ']')
-      bowieCard.removeChild(li)
+      let p = bowieCard.querySelector('[data-id=' + change.doc.id + ']')
+      bowieCard.removeChild(p)
     }
   })
 })
 
 // show real time for Cy
 taskRef.where('assignedTo', '==', 'Cy').onSnapshot(snapshot => {
+  taskRef.orderBy('deadline', 'asc')
   let changes = snapshot.docChanges()
   changes.forEach(change => {
     if (change.type === 'added') {
       renderNewCard(change.doc, cyCard)
     } else if (change.type === 'removed') {
-      let li = cyCard.querySelector('[data-id=' + change.doc.id + ']')
-      cyCard.removeChild(li)
+      let p = cyCard.querySelector('[data-id=' + change.doc.id + ']')
+      cyCard.removeChild(p)
     }
   })
 })
