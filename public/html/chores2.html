@@ -21,43 +21,43 @@
   <!-- load jquery -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+
   <!-- load jquery-ui -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!-- load firebase api for login-->
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
   <!-- load firebase firestore api for database -->
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
- 
-
 
 </head>
 
 <body>
+  
+    <!-- navbar -->
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="../img/tbh-logo-wh-hires.png">
+        </a>
 
-  <!-- navbar -->
-  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
-        <img src="../img/tbh-logo-wh-hires.png">
-      </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            Log Out
-          </a>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              Log Out
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+
 
   
 <!-- quote api 1 -->
@@ -86,46 +86,54 @@
             </div>
           <p>Deadline:<input name="dateDeadline" class="input is-primary" id="datepicker"></p>
           <p>Family Member:
-              <div class="select is-primary">
-                <select name="user" id="user">
-                <option value="Zoe">Zoe</option>
-                <option value="Marco">Marco</option>
-                <option value="Bowie">Bowie</option>
-                <option value="Cy">Cy</option>
-                </select>
-               </div>
+            <div class="select is-primary">
+                  <select name="user" id="user">
+                    <option value="Zoe">Zoe</option>
+                    <option value="Marco">Marco</option>
+                    <option value="Bowie">Bowie</option>
+                    <option value="Cy">Cy</option>
+                  </select>
+                </div>
+             </div>
             </p>
             <br/>
           <button class="formSubmit">Submit</button>
         </form>
     </div>
     </div>
-
-<!-- column 3 -->
-    <div class="column">
+           
+   
+      <!-- column 3 -->
+      <div class="column">
         <div class="columns is-mobile dutyColumns">
 
-            <div class="personalbar column">
-                <div class="name">
-                    <p>Zoe</p>
-                </div>
-                <div class="tasks" id="Zoe"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Zoe</p>
             </div>
+            <div class="tasks" id="Zoe"></div>
+          </div>
 
-            <div class="personalbar column">
-                <div class="name"><p>Marco</p></div>
-                <div class="tasks" id="Marco"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Marco</p>
             </div>
+            <div class="tasks" id="Marco"></div>
+          </div>
 
-            <div class="personalbar column">
-                <div class="name"><p>Bowie</p></div>
-                <div class="tasks" id="Bowie"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Bowie</p>
             </div>
+            <div class="tasks" id="Bowie"></div>
+          </div>
 
-            <div class="personalbar column">
-                <div class="name"><p>Cy</p></div>
-                <div class="tasks" id="Cy"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Cy</p>
             </div>
+            <div class="tasks" id="Cy"></div>
+          </div>
 
         </div>
 
