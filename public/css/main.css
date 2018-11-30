@@ -77,7 +77,7 @@ $primary-invert: $pink-invert;
               margin: 0 auto;
             }
 
-            .taskCard * {
+            .taskCard  {
               margin: 15px auto;
             }
 

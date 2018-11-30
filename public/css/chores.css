@@ -1,0 +1,45 @@
+.column1 {
+    color:white;
+    font-size: 14pt;
+    font-weight: 600; 
+    margin: 10px 20px;
+    text-align: left; 
+}
+
+#taskCard {
+    margin:0;
+}
+
+.dutyColumns * {
+    color:white;
+    font-size:12pt;
+    font-weight:100;
+    text-align: center
+}
+
+.name{
+    font-size:20pt;
+    font-weight:300;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:10px;
+}
+
+.dutyCard{
+    padding-top:5px;
+    padding-bottom:5px;
+    margin:5px;
+    border:2px groove hsl(171, 100%, 41%);
+    background-color:hsl(171, 100%, 41%);
+}
+
+.dutyDeadline{
+    margin:10px auto 10px auto;
+    font-weight:bold;
+}
+
+.dutyCard button {
+   background-color:white;
+   color:hsl(171, 100%, 41%);
+   margin-top:15px;
+}
