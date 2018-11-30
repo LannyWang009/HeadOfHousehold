@@ -13,106 +13,115 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
 
   <script src="../../src-js/quote.js"></script>
   <script>
-    $( function() {
-      $( "#datepicker" ).datepicker();
-    } );
-    </script>
+    $(function () {
+      $("#datepicker").datepicker();
+    });
+
+  </script>
 
 </head>
 
 <body>
+  
+    <!-- navbar -->
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <img src="../img/tbh-logo-wh-hires.png">
+        </a>
 
-  <!-- navbar -->
-  <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
-        <img src="../img/tbh-logo-wh-hires.png">
-      </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            Log Out
-          </a>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              Log Out
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  
-<!-- quote api 1 -->
-<div class="quote">"To Thy Own Self Be True"</div>
 
-<div class="columns is-desktop">
-  <!-- task form -->
-<div class="column column1">
-      <div class="taskForm">
-        <form id="taskCard">
-          <p style="background-color:hsl(171, 100%, 41%); text-align: center; padding:0.05%">Add a new chore</p>
-          <p>Chore: 
-            <div class="select is-primary">
-                <select name="task" id="taskName">
-                <option value="fas fa-utensils fa-3x">Dishes</option> <!-- just change the value to whatever class name Font Awesome requires -->
-                <option value="fab fa-amazon-pay">Bills</option>
-                </select>
-            </div>
-          <p>Deadline:<input name="dateDeadline" class="input is-primary" id="datepicker"></p>
-          <p>Family Member:
+    <!-- quote api 1 -->
+    <div class="quote">"To Thy Own Self Be True"</div>
+
+    <div class="columns is-desktop">
+      <!-- task form -->
+      <div class="column column1">
+        <div class="taskForm">
+          <form id="taskCard">
+            <p style="background-color:hsl(171, 100%, 41%); text-align: center; padding:0.05%">Add a new chore</p>
+            <p>Chore:
               <div class="select is-primary">
-                <select name="user" id="user">
-                <option value="Zoe">Zoe</option>
-                <option value="Marco">Marco</option>
-                <option value="Bowie">Bowie</option>
-                <option value="Cy">Cy</option>
+                <select name="task" id="taskName">
+                  <option value="fas fa-utensils fa-3x">Dishes</option>
+                  <!-- just change the value to whatever class name Font Awesome requires -->
+                  <option value="fab fa-amazon-pay">Bills</option>
                 </select>
-               </div>
-            </p>
-            <br/>
-          <button>Submit</button>
-        </form>
-    </div>
-    </div>
+              </div>
+              <p>Deadline:<input name="dateDeadline" class="input is-primary" id="datepicker"></p>
+              <p>Family Member:
+                <div class="select is-primary">
+                  <select name="user" id="user">
+                    <option value="Zoe">Zoe</option>
+                    <option value="Marco">Marco</option>
+                    <option value="Bowie">Bowie</option>
+                    <option value="Cy">Cy</option>
+                  </select>
+                </div>
+              </p>
+              <br />
+              <button>Submit</button>
+          </form>
+        </div>
+      </div>
 
-<!-- column 3 -->
-    <div class="column">
+      <!-- column 3 -->
+      <div class="column">
         <div class="columns is-mobile dutyColumns">
 
-            <div class="personalbar column">
-                <div class="name">
-                    <p>Zoe</p>
-                </div>
-                <div class="tasks" id="Zoe"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Zoe</p>
             </div>
+            <div class="tasks" id="Zoe"></div>
+          </div>
 
-            <div class="personalbar column">
-                <div class="name"><p>Marco</p></div>
-                <div class="tasks" id="Marco"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Marco</p>
             </div>
+            <div class="tasks" id="Marco"></div>
+          </div>
 
-            <div class="personalbar column">
-                <div class="name"><p>Bowie</p></div>
-                <div class="tasks" id="Bowie"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Bowie</p>
             </div>
+            <div class="tasks" id="Bowie"></div>
+          </div>
 
-            <div class="personalbar column">
-                <div class="name"><p>Cy</p></div>
-                <div class="tasks" id="Cy"></div>
+          <div class="personalbar column">
+            <div class="name">
+              <p>Cy</p>
             </div>
+            <div class="tasks" id="Cy"></div>
+          </div>
 
         </div>
 
@@ -120,7 +129,7 @@
       </div>
     </div>
 
- 
+
 
 
 
