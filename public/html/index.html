@@ -29,7 +29,7 @@
   <script type="text/javascript">
     // FirebaseUI config.
     var uiConfig = {
-      signInSuccessUrl: '<url-to-redirect-to-on-success>',
+      signInSuccessUrl: './chores2.html',
       signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -43,10 +43,10 @@
       // tosUrl and privacyPolicyUrl accept either url string or a callback
       // function.
       // Terms of service url/callback.
-      tosUrl: '<your-tos-url>',
+      tosUrl: './underconstruction.html',
       // Privacy policy url/callback.
       privacyPolicyUrl: function() {
-        window.location.assign('<your-privacy-policy-url>');
+        window.location.assign('./underconstruction.html');
       }
     };
 
@@ -58,7 +58,7 @@
 </head>
 
 <body>
-
+    <div id="firebaseui-auth-container"></div>
   <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="index.html">
@@ -88,7 +88,7 @@
     
     <div class="tbh-row">
       <div class="tbh-card-item"><h1>Chores</h1><br>
-        <a href="chores.html"><img src="../img/chores-wh.png" width="80px"></a>
+        <a href="chores2.html"><img src="../img/chores-wh.png" width="80px"></a>
       </div>
       <div class="tbh-card-item"><h1>Bills</h1><br>
         <a href="underconstruction.html"><img src="../img/bills-wh.png" width="80px"></a>
