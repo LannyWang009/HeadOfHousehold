@@ -31,6 +31,7 @@
     margin:5px;
     border:2px groove hsl(171, 100%, 41%);
     background-color:hsl(171, 100%, 41%);
+    border-radius: 8px;
 }
 
 .dutyDeadline{
@@ -42,4 +43,30 @@
    background-color:white;
    color:hsl(171, 100%, 41%);
    margin-top:15px;
+   border-radius: 5px;
+   text-transform: uppercase;
+}
+
+.dutyCard i{
+    padding:10px auto 10px auto;
+    color:hsla(171, 100%, 93%, 1);
+}
+
+.formSubmit {
+    border-radius: 10px;
+    font-size:20px;
+    color:hsla(171, 100%, 41%, 1);
+    padding:10px;
+    font-weight: bold;
+}
+
+.choreHint {
+    background-color:hsl(171, 100%, 41%);
+    text-align: center; 
+    padding:0.05%;
+    border-radius: 8px;
+}
+
+.tasks {
+    border-radius: 8px;
 }
