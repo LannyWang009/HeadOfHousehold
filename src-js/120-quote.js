@@ -7,7 +7,7 @@ window.MYAPP = window.MYAPP || {}
 
   // NOTE: this "foo" is trapped inside the anonymous function that wraps this entire file
   // it has no relation to any of the other "foo" functions
-
+  const $ = window.jQuery
   function initQuote () {
     console.log('loading quote api')
     $(document).ready(function () {

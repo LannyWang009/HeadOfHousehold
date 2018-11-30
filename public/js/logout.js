@@ -1,3 +1,5 @@
+/* global firebase */
+
 // Initialize Firebase
 var config = {
   apiKey: 'AIzaSyAfOH62OimyZABipB7qopRwtbbwuNdKGaA',
@@ -9,22 +11,21 @@ var config = {
 }
 firebase.initializeApp(config)
 
-
 const auth = firebase.auth()
 const btnLogout = document.getElementById('btnLogout')
 
 btnLogout.addEventListener('click', e => {
   firebase.auth().signOut().then(function () {
-      // Redirect to google sign out.
-      window.location.assign('https://www.techbalancedhome.com');
-      console.log('click logout')
+    // Redirect to google sign out.
+    window.location.assign('https://www.techbalancedhome.com')
+    console.log('click logout')
   })
 })
 
 auth.onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
-      console.log('logged in as: ', firebaseUser)
+    console.log('logged in as: ', firebaseUser)
   } else {
-      console.log('not logged in')
+    console.log('not logged in')
   }
 })
