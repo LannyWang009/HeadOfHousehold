@@ -228,6 +228,7 @@ pre {
 
 body {
   background-image: url("../img/clouds.jpg");
+  height: 100%;
   color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;
