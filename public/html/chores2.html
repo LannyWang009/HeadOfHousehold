@@ -63,12 +63,20 @@
 <div class="column column1">
       <div class="taskForm">
         <form id="taskCard">
-          <p style="background-color:hsl(171, 100%, 41%); text-align: center; padding:0.05%">Add a new chore</p>
+          <p class="choreHint">Add a new chore</p>
           <p>Chore: 
             <div class="select is-primary">
                 <select name="task" id="taskName">
                 <option value="fas fa-utensils fa-3x">Dishes</option> <!-- just change the value to whatever class name Font Awesome requires -->
-                <option value="fab fa-amazon-pay">Bills</option>
+                <option value="fas fa-credit-card fa-3x">Bills</option>
+                <option value="fas fa-tshirt fa-3x">Laundry</option>
+                <option value="fas fa-book fa-3x">Homework</option>
+                <option value="fas fa-car fa-3x">Wash Car</option>
+                <option value="fas fa-oil-can fa-3x">Change car oil</option>
+                <option value="fas fa-dog-leashed fa-3x">Walk the Dog</option>
+                <option value="fas fa-bone fa-3x">Feed the animal</option>
+
+                
                 </select>
             </div>
           <p>Deadline:<input name="dateDeadline" class="input is-primary" id="datepicker"></p>
@@ -83,7 +91,7 @@
                </div>
             </p>
             <br/>
-          <button>Submit</button>
+          <button class="formSubmit">Submit</button>
         </form>
     </div>
     </div>
