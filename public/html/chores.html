@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tech Balanced Household</title>
+  <title>TBH Chores</title>
   <!-- load the fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
   <!-- load fontawesome -->
@@ -17,7 +17,7 @@
   <!-- load chores.css -->
   <link rel="stylesheet" href="../css/chores.css">
 
-  <!-- load js files -->
+  
   <!-- load jquery -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
@@ -28,15 +28,17 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
   <!-- load firebase firestore api for database -->
   <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+  <!-- load firebase firestore auth for logging out -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 
 </head>
 
 <body>
   
     <!-- navbar -->
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="index.html">
+        <a class="navbar-item" href="home.html">
           <img src="../img/tbh-logo-wh-hires.png">
         </a>
 
@@ -49,7 +51,7 @@
 
       <div class="navbar-end">
         <div class="navbar-item">
-          <div class="buttons">
+          <div class="buttons" id="btnLogout">
             <a class="button is-primary">
               Log Out
             </a>
@@ -97,6 +99,8 @@
              </div>
             </p>
             <br/>
+            <br>
+            <br>
           <button class="formSubmit">Submit</button>
         </form>
     </div>
@@ -104,32 +108,32 @@
            
    
       <!-- column 3 -->
-      <div class="column">
-        <div class="columns is-mobile dutyColumns">
+      <div class="tile">
+        <div class="tile is-ancestor">
 
-          <div class="personalbar column">
-            <div class="name">
+          <div class="tile is-parent is-vertical is-2">
+            <div class="tile is-child name">
               <p>Zoe</p>
             </div>
-            <div class="tasks" id="Zoe"></div>
+            <div class="tasks is-child" id="Zoe"></div>
           </div>
 
-          <div class="personalbar column">
-            <div class="name">
+          <div class="tile is-parent is-vertical is-2">
+            <div class="tile is-child name">
               <p>Marco</p>
             </div>
             <div class="tasks" id="Marco"></div>
           </div>
 
-          <div class="personalbar column">
-            <div class="name">
+          <div class="tile is-parent is-vertical is-2">
+            <div class="tile is-child name">
               <p>Bowie</p>
             </div>
             <div class="tasks" id="Bowie"></div>
           </div>
 
-          <div class="personalbar column">
-            <div class="name">
+          <div class="tile is-parent is-vertical is-2">
+            <div class="tile is-child name">
               <p>Cy</p>
             </div>
             <div class="tasks" id="Cy"></div>
@@ -141,9 +145,9 @@
       </div>
     </div>
 
-  <script src="../../src-js/database.js"></script>
-  <!-- <script src="../js/app.js"></script> --> 
-  <!-- Note: eventually we will load the public/js/app.js after we build all the js files.  -->
+  <script src="../js/database.js"></script> 
+  <script src="../js/app.js"></script> 
+
 </body>
 
 </html>

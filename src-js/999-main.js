@@ -12,6 +12,7 @@ window.MYAPP = window.MYAPP || {}
 
     // let's initialize all of our other modules
     MYAPP.initQuote()
+    MYAPP.initDatepicker()
   }
 
   // run globalInit when the DOM is ready using jQuery
