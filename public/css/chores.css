@@ -6,10 +6,6 @@
     text-align: left; 
 }
 
-#taskCard {
-    margin:0;
-}
-
 .dutyColumns * {
     color:white;
     font-size:12pt;
@@ -23,13 +19,14 @@
     text-align:center;
     padding-top:5px;
     padding-bottom:10px;
+    color:white;
+    font-weight: bold;
 }
 
 .dutyCard{
-    padding-top:5px;
-    padding-bottom:5px;
-    margin:5px;
-    border:2px groove hsl(171, 100%, 41%);
+    padding:10px;
+    margin:10px;
+    border:5px groove silver;
     background-color:hsl(171, 100%, 41%);
     border-radius: 8px;
 }
@@ -45,11 +42,13 @@
    margin-top:15px;
    border-radius: 5px;
    text-transform: uppercase;
+   font-weight: bolder;
+   font-size:20px;
 }
 
 .dutyCard i{
     padding:10px auto 10px auto;
-    color:hsla(171, 100%, 93%, 1);
+    color:white;
 }
 
 .formSubmit {
@@ -58,12 +57,13 @@
     color:hsla(171, 100%, 41%, 1);
     padding:10px;
     font-weight: bold;
+    background-color: white;
 }
 
 .choreHint {
     background-color:hsl(171, 100%, 41%);
     text-align: center; 
-    padding:0.05%;
+    padding:2%;
     border-radius: 8px;
 }
 

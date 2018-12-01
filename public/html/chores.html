@@ -65,22 +65,24 @@
 <!-- quote api 1 -->
 <div class="quote">"To Thy Own Self Be True"</div>
 
-<div class="columns is-desktop">
+
   <!-- task form -->
-<div class="column column1">
-      <div class="taskForm">
+<div class="column1">
+    <div class="taskForm">
         <form id="taskCard">
-          <p class="choreHint">Add a new chore</p>
+          <p class="choreHint"> Add a New Chore</p>
           <p>Chore: 
             <div class="select is-primary">
                 <select name="task" id="taskName">
                 <option value="fas fa-utensils fa-3x">Dishes</option> <!-- just change the value to whatever class name Font Awesome requires -->
-                <option value="fas fa-credit-card fa-3x">Bills</option>
+                <option value="fas fa-credit-card fa-3x">Pay bills</option>
+                <option value="fas fa-broom fa-3x">Clean</option>
+                <option value="fas fa-trash fa-3x">Take out trash</option>
                 <option value="fas fa-tshirt fa-3x">Laundry</option>
                 <option value="fas fa-book fa-3x">Homework</option>
                 <option value="fas fa-car fa-3x">Wash Car</option>
                 <option value="fas fa-oil-can fa-3x">Change car oil</option>
-                <option value="fas fa-dog-leashed fa-3x">Walk the Dog</option>
+                <option value="fas fa-dog fa-3x">Walk the Dog</option>
                 <option value="fas fa-bone fa-3x">Feed the animal</option>
 
                 
@@ -95,45 +97,42 @@
                     <option value="Bowie">Bowie</option>
                     <option value="Cy">Cy</option>
                   </select>
-                </div>
              </div>
-            </p>
-            <br/>
-            <br>
-            <br>
-          <button class="formSubmit">Submit</button>
+          </p>
+          <br/>
+          <button class="formSubmit"><i class="fas fa-plus-circle"></i>  Submit</button>
         </form>
     </div>
-    </div>
+</div>
            
    
-      <!-- column 3 -->
+      
       <div class="tile">
         <div class="tile is-ancestor">
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Zoe</p>
             </div>
             <div class="tasks is-child" id="Zoe"></div>
           </div>
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Marco</p>
             </div>
-            <div class="tasks" id="Marco"></div>
+            <div class="tile is-child tasks" id="Marco"></div>
           </div>
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Bowie</p>
             </div>
             <div class="tasks" id="Bowie"></div>
           </div>
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Cy</p>
             </div>
             <div class="tasks" id="Cy"></div>
