@@ -1,5 +1,5 @@
 # Tech Balanced Household
-[![Build Status](https://travis-ci.org/LannyWang009/HeadOfHousehold.svg?branch=master)](https://travis-ci.org/LannyWang009/HeadOfHousehold) 
+[![Build Status](https://travis-ci.org/LannyWang009/HeadOfHousehold.svg?branch=master)](https://travis-ci.org/LannyWang009/TechBalancedHousehold) 
 
 > This is the final project for "Phase 1" of the DigitalCrafts Flex Class. The project is to build a web application as a group with libraries and APIs. For the credit of the course, our project must be in accordance with the requirements laid out below to fulfill Texas State requirements for creidt for the course. 
 
