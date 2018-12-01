@@ -1,3 +1,5 @@
+/* global firebase */
+
 // Initialize Firebase
 var config = {
   apiKey: 'AIzaSyAfOH62OimyZABipB7qopRwtbbwuNdKGaA',
@@ -68,7 +70,7 @@ function renderNewCard (doc, assignedUser) {
   deadline.setAttribute('style', 'display: flex; justify-content: center; ')
 
   // assignedTo.textContent = doc.data().assignedTo
-  doneBtn.textContent = 'done'
+  doneBtn.textContent = 'DONE!'
   doneBtn.setAttribute('style', 'display: block; margin: 15px auto 0 auto;')
 
   div.appendChild(fontAwesome)
@@ -140,21 +142,21 @@ taskRef.where('assignedTo', '==', 'Cy').onSnapshot(snapshot => {
   })
 })
 
-//logout for chores page.... cant use logout.js because it will duplicate the initialization
+// logout for chores page.... cant use logout.js because it will duplicate the initialization
 const auth = firebase.auth()
 const btnLogout = document.getElementById('btnLogout')
 
 btnLogout.addEventListener('click', e => {
   firebase.auth().signOut().then(function () {
-      window.location.assign('https://www.techbalancedhome.com');
-      console.log('click logout')
+    window.location.assign('https://www.techbalancedhome.com')
+    console.log('click logout')
   })
 })
 
 auth.onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
-      console.log(firebaseUser)
+    console.log(firebaseUser)
   } else {
-      console.log('not logged in')
+    console.log('not logged in')
   }
 })

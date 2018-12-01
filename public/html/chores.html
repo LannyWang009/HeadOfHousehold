@@ -17,7 +17,7 @@
   <!-- load chores.css -->
   <link rel="stylesheet" href="../css/chores.css">
 
-  <!-- load js files -->
+  
   <!-- load jquery -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
 <body>
   
     <!-- navbar -->
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="home.html">
           <img src="../img/tbh-logo-wh-hires.png">
@@ -51,13 +51,8 @@
 
       <div class="navbar-end">
         <div class="navbar-item">
-<<<<<<< HEAD
-          <div class="buttons">
-            <a class="button is-primary" onclick="logout()">
-=======
           <div class="buttons" id="btnLogout">
             <a class="button is-primary">
->>>>>>> 35bc6a3d61bc3aeb3c09a14b279a3a0b6daacc46
               Log Out
             </a>
           </div>
@@ -70,22 +65,24 @@
 <!-- quote api 1 -->
 <div class="quote">"To Thy Own Self Be True"</div>
 
-<div class="columns is-desktop">
+
   <!-- task form -->
-<div class="column column1">
-      <div class="taskForm">
+<div class="column1">
+    <div class="taskForm">
         <form id="taskCard">
-          <p class="choreHint">Add a new chore</p>
+          <p class="choreHint"> Add a New Chore</p>
           <p>Chore: 
             <div class="select is-primary">
                 <select name="task" id="taskName">
                 <option value="fas fa-utensils fa-3x">Dishes</option> <!-- just change the value to whatever class name Font Awesome requires -->
-                <option value="fas fa-credit-card fa-3x">Bills</option>
+                <option value="fas fa-credit-card fa-3x">Pay bills</option>
+                <option value="fas fa-broom fa-3x">Clean</option>
+                <option value="fas fa-trash fa-3x">Take out trash</option>
                 <option value="fas fa-tshirt fa-3x">Laundry</option>
                 <option value="fas fa-book fa-3x">Homework</option>
                 <option value="fas fa-car fa-3x">Wash Car</option>
                 <option value="fas fa-oil-can fa-3x">Change car oil</option>
-                <option value="fas fa-dog-leashed fa-3x">Walk the Dog</option>
+                <option value="fas fa-dog fa-3x">Walk the Dog</option>
                 <option value="fas fa-bone fa-3x">Feed the animal</option>
 
                 
@@ -100,45 +97,42 @@
                     <option value="Bowie">Bowie</option>
                     <option value="Cy">Cy</option>
                   </select>
-                </div>
              </div>
-            </p>
-            <br/>
-            <br>
-            <br>
-          <button class="formSubmit">Submit</button>
+          </p>
+          <br/>
+          <button class="formSubmit"><i class="fas fa-plus-circle"></i>  Submit</button>
         </form>
     </div>
-    </div>
+</div>
            
    
-      <!-- column 3 -->
+      
       <div class="tile">
         <div class="tile is-ancestor">
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Zoe</p>
             </div>
             <div class="tasks is-child" id="Zoe"></div>
           </div>
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Marco</p>
             </div>
-            <div class="tasks" id="Marco"></div>
+            <div class="tile is-child tasks" id="Marco"></div>
           </div>
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Bowie</p>
             </div>
             <div class="tasks" id="Bowie"></div>
           </div>
 
-          <div class="tile is-parent is-vertical is-2">
-            <div class="tile is-child name">
+          <div class="tile is-parent is-vertical is-3">
+            <div class="name">
               <p>Cy</p>
             </div>
             <div class="tasks" id="Cy"></div>
@@ -150,10 +144,9 @@
       </div>
     </div>
 
-  <script src="../../src-js/database.js"></script> 
+  <script src="../js/database.js"></script> 
+  <script src="../js/app.js"></script> 
 
-  <!-- <script src="../js/app.js"></script> --> 
-  <!-- Note: eventually we will load the public/js/app.js after we build all the js files.  -->
 </body>
 
 </html>

@@ -45,9 +45,14 @@ $primary-invert: $pink-invert;
             }
              .taskForm {
               /* background-color: rgb(245, 240, 240, 0.2); */
-              width: 20vw;
-              height: 15vh;
-              margin: 50px 15px 3px 3px;
+              width: 80vw;
+              max-width: 800px;
+              min-width: 300px;
+              margin: 8vh auto;
+              text-align: left;
+              border:5px dotted silver;
+              padding:10px;
+              border-radius: 10px;
             }
 
             .familyNames {
@@ -65,26 +70,31 @@ $primary-invert: $pink-invert;
               flex-direction: row;
             }
              .tasks {
-              background-color: rgb(245, 240, 240, 0.2);
-              margin: 2px 4px;
+              /* background-color: rgb(245, 240, 240, 0.2); */
+              margin: 5px;
+              padding: 5px;
+              border-radius: 8px;
+              border:5px dashed silver;
             }
 
-            .taskCard {
-              width: 10vw;
-              height: 15vh;
+            #taskCard {
               margin: 0 auto;
+              line-height:2em;
+              padding:5px;
             }
 
-            .taskCard  {
-              margin: 15px auto;
-            }
+
+           
 
              .quote {
               color: #ffffff;
               font-size: 14pt;
               font-weight: 600; 
               text-align: center;
-              margin: 60px 0px 0px 0px;
+              margin-top:60px;
+              margin-bottom:30px;
+              margin-left: 10vw;
+              margin-right: 10vw;
               font-style: italic;
             }
             
@@ -179,7 +189,10 @@ table {
   font-size: 14pt;
   font-weight: 600; 
   text-align: center;
-  margin: 60px 0px 0px 0px;
+  margin-top:60px;
+  margin-bottom:30px;
+  margin-left: 10vw;
+  margin-right: 10vw;
   font-style: italic;
 }
 
@@ -226,6 +239,11 @@ pre {
 
 body {
   background-image: url("../img/clouds.jpg");
+  min-height:700px;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+  height: 100%;
   color: #4a4a4a;
   font-size: 1rem;
   font-weight: 400;
@@ -6482,8 +6500,8 @@ label.panel-block {
       margin-left: 100%; } }
 
 .columns {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: -0.75rem; }
   .columns:last-child {
     margin-bottom: -0.75rem; }
@@ -6576,7 +6594,8 @@ label.panel-block {
     .tile.is-ancestor:not(:last-child) {
       margin-bottom: 0.75rem; }
   .tile.is-child {
-    margin: 0 !important; }
+    margin: 0 !important; 
+  }
   .tile.is-parent {
     padding: 0.75rem; }
   .tile.is-vertical {

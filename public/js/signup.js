@@ -1,3 +1,5 @@
+/* global firebase firebaseui */
+
 // Initialize Firebase
 var config = {
   apiKey: 'AIzaSyAfOH62OimyZABipB7qopRwtbbwuNdKGaA',
