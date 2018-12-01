@@ -6,14 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tech Balanced Home</title>
+  <!-- load google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
-  <link rel="stylesheet" href="../css/main.css">
-  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <!-- load fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+  <!-- load main.css -->
+  <link rel="stylesheet" href="../css/main.css">
+  <!-- load firebaseui.css -->
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
-  <script src="https://www.gstatic.com/firebasejs/ui/3.4.1/firebase-ui-auth__en.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/3.4.1/firebase-ui-auth.css" />
+  <!-- load jquery-ui css -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- load firebase api -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <!-- load firebase UI -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/3.4.1/firebase-ui-auth__en.js"></script>
+  <!-- load jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <!-- load jquery-ui -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
 
 </head>
@@ -21,7 +35,7 @@
 <body>
   <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
+      <a class="navbar-item" href=index.html">
         <img src="../img/tbh-logo-wh-hires.png">
       </a>
 
@@ -32,12 +46,14 @@
       </a>
     </div>
   </nav>
-
+  <div>
+    
+  </div>
   <div id="firebaseui-auth-container"></div>
 
+  <script type="text/javascript" src="js/signup.js"></script>
+  <script src="js/app.js"></script>
 
-  <script type="text/javascript" src="lib/main.js"></script>
-  <script type="text/javascript" src="../js/signup.js "></script>
 </body>
 
 </html>
