@@ -70,7 +70,7 @@ function renderNewCard (doc, assignedUser) {
   deadline.setAttribute('style', 'display: flex; justify-content: center; ')
 
   // assignedTo.textContent = doc.data().assignedTo
-  doneBtn.textContent = 'done'
+  doneBtn.textContent = 'DONE!'
   doneBtn.setAttribute('style', 'display: block; margin: 15px auto 0 auto;')
 
   div.appendChild(fontAwesome)
