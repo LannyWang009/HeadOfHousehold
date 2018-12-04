@@ -161,6 +161,6 @@ auth.onAuthStateChanged(firebaseUser => {
     })
   } else {
     console.log('not logged in')
-    window.location.assign('../html/errorlogin.html')
+    window.location.assign('../html/index.html')
   }
 })
