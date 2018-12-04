@@ -148,15 +148,19 @@ const btnLogout = document.getElementById('btnLogout')
 
 btnLogout.addEventListener('click', e => {
   firebase.auth().signOut().then(function () {
-    window.location.assign('https://www.techbalancedhome.com')
+    window.location.assign('../html/index.html')
     console.log('click logout')
   })
 })
 
 auth.onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
-    console.log(firebaseUser)
+    console.log('logged in as: ', firebaseUser.uid)
+    firebaseUser.getIdToken().then(function (data) {
+      console.log('token: ', data)
+    })
   } else {
     console.log('not logged in')
+    window.location.assign('../html/index.html')
   }
 })

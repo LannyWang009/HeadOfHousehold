@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -48,11 +49,29 @@
   <div>
     
   </div>
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="columns is-mobile is-centered">
+        <div class="column is-half">
+          <p class="bd-notification is-primary">
+            <h1 class="html">You must be logged in to do that!</h1><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
   <div id="firebaseui-auth-container"></div>
 
   <script type="text/javascript" src="../js/signup.js"></script>
   <script src="../js/app.js"></script>
 
 </body>
-
+<script type="text/javascript">
+  $(".modal").addClass("is-active")
+  $(".modal").click(function() {
+   $(".modal").removeClass("is-active")
+  });
+</script>
 </html>
