@@ -148,7 +148,7 @@ const btnLogout = document.getElementById('btnLogout')
 
 btnLogout.addEventListener('click', e => {
   firebase.auth().signOut().then(function () {
-    window.location.assign('https://www.techbalancedhome.com')
+    window.location.assign('../html/index.html')
     console.log('click logout')
   })
 })
@@ -161,6 +161,6 @@ auth.onAuthStateChanged(firebaseUser => {
     })
   } else {
     console.log('not logged in')
-    window.location.assign('../html/index.html')
+    window.location.assign('../html/errorlogin.html')
   }
 })
