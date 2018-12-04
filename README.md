@@ -9,7 +9,11 @@ This project features a web application that will comprehensively manage the hou
 Our app's mission is to improve household efficiency and to relieve the head of household(whether the mom or dad)'s burden through technologies. 
 
 ## About Us
-Our team includes Audy Arandela(https://github.com/aarandela), Erica Aguirre(https://github.com/Zenerika), Robert L Arnold III(https://github.com/Lee-ArnoldIII), and Lanzhen Wang(https://github.com/LannyWang009). 
+Our team includes: 
+- [Audy Arandela](https://github.com/aarandela)
+- [Erica Aguirre](https://github.com/Zenerika)
+- [Robert L Arnold III](https://github.com/Lee-ArnoldIII)
+- [Lanzhen Wang](https://github.com/LannyWang009)
 
 
 ## Tech Used
@@ -57,7 +61,7 @@ This app **must**:
 
 - Deployment of your application to somewhere other than GitHub Pages. Examples:
   - [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html)
-  - [Google Cloud](https://cloud.google.com/storage/docs/hosting-static-website)
+  - **[Google Cloud](https://cloud.google.com/storage/docs/hosting-static-website)**
   - [Netlify](https://www.netlify.com/)
   - [Neocities](https://neocities.org/)
   - [Surge](https://surge.sh/)
