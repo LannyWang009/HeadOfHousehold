@@ -155,8 +155,12 @@ btnLogout.addEventListener('click', e => {
 
 auth.onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
-    console.log(firebaseUser)
+    console.log('logged in as: ', firebaseUser.uid)
+    firebaseUser.getIdToken().then(function (data) {
+      console.log('token: ', data)
+    })
   } else {
     console.log('not logged in')
+    window.location.assign('../html/index.html')
   }
 })

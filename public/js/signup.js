@@ -13,7 +13,13 @@ firebase.initializeApp(config)
 
 // FirebaseUI config.
 var uiConfig = {
-  signInSuccessUrl: '../html/home.html',
+  signInSuccessUrl: '',
+  'callbacks': {
+    'signInSuccess': function (currentUser, credential, redirectUrl) {
+      window.location.href = '../html/home.html'
+      return false
+    }
+  },
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
