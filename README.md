@@ -11,7 +11,7 @@ Our app's mission is to improve household efficiency and to relieve the head of 
 ## About Us
 Our team includes: 
 - [Audy Arandela](https://github.com/aarandela)
-- [Erica Aguirre](https://github.com/Zenerika)
+- [Erika Aguirre](https://github.com/Zenerika)
 - [Robert L Arnold III](https://github.com/Lee-ArnoldIII)
 - [Lanzhen Wang](https://github.com/LannyWang009)
 
