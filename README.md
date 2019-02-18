@@ -1,7 +1,7 @@
 # Tech Balanced Home
 [![Build Status](https://travis-ci.org/LannyWang009/TechBalancedHome.svg?branch=master)](https://travis-ci.org/LannyWang009/TechBalancedHome)
 
-> This is the final project for "Phase 1" of the DigitalCrafts Flex Class. The project is to build a web application as a group with libraries and APIs. For the credit of the course, our project must be in accordance with the requirements laid out below to fulfill Texas State requirements for creidt for the course. 
+> This is the final project for "Phase 1" of the DigitalCrafts Flex Class. The project is to build a web application as a group with libraries and APIs. For the credit of the course, our project must be in accordance with the requirements laid out below to fulfill Texas State requirements for credit for the course. 
 
 ## Project Description
 This project features a web application that will comprehensively manage the household, with functions including sorting daily chores, creating shopping lists, paying bills, managing appointments and etc. In this group project, our main focus is on the chores page, on which the head of household can assign duties to other family members, while family members can view their coming-up chores, change the status as they finish and receive notification messages. 
